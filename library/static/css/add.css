@@ -1,0 +1,53 @@
+#formContainer{
+    margin: auto;
+    width: 500px;
+}
+label{
+    margin: 25px 0px;
+    display: block;
+    font-size: 20px;
+}
+input{
+    display: block;
+    margin: 20px 0px;
+    width: 400px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+select{
+    display: block;
+    margin: 20px 0px;
+    width: 400px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+#action{
+    text-align: center;
+    width: 400px;
+}
+#action a{
+    margin-left: 20px;
+    text-decoration: none;
+    border: 1px solid red;
+    background: red;
+    color: white;
+}
+#action a:hover{
+    background: rgba(255,0,0,0.8);
+}
+#addbook,#action a{
+    padding: 10px 20px;
+    border-radius:10px ;
+    cursor: pointer;
+}
+#update{
+    padding: 10px 20px;
+    border-radius:10px ;
+    cursor: pointer;
+    background: dodgerblue;
+    border-color: dodgerblue;
+    color: white;
+    font-size: 15px;
+}
