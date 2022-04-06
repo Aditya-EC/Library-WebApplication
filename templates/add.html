@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>Add Book</title>
+<style>
+    #addbook{
+        background: #aaa;
+    }
+</style>
+{%endblock title %}
+{% block content %}
+<link href="{% static 'css/add.css' %}" rel="stylesheet">
+    <div id="formContainer">
+        <form method="post">
+            {% csrf_token %}
+            <label>Book Name :</label>
+            <input name="book" type="text" required>
+            <label>Author Name :</label>
+            <input name="author" type="text" required>
+            <label>Book Type :</label>
+            <select name="type" required>
+                {% for type in bookType %}
+                    <option value="{{type}}">{{type}}</option>
+                {% endfor %}
+            </select>
+            <div id="action">
+                <button type="submit" id="addbook">Add Book</button>
+                <a href="{% url 'mybooks' %}">Cancel</a>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

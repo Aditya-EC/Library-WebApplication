@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>My Books</title>
+<style>
+    #mybooks{
+        background: #aaa;
+    }
+</style>
+{%endblock title %}
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <td>Sr. No.</td>
+                <td>Book Name</td>
+                <td>Author</td>
+                <td id="typeHead">Type</td>
+                <td colspan="2" id="actionHead"></td>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in book %}
+        
+                <tr>
+                    <td></td>
+                    <td>{{i.bookName}}</td>
+                    <td>{{i.author}}</td>
+                    <td>{{i.bookType}}</td>
+                    <td class="actionData"><a class="editButton" href="/update/{{i.id}}">Edit</a></td>
+                    <td class="actionData"><a class="deleteButton" href="/delete/{{i.id}}">Delete</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        
+    </table>
+{% endblock content %}

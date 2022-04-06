@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    {% endblock title %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header id="mainHeader">
+        <h1>Book Library</h1>
+    </header>
+    <nav id="navbar">
+        <div class="container">
+            <ul id="list1">
+                <li id="home"><a href="{% url 'home' %}">Home</a></li>
+                {% if user.is_authenticated %}
+                    <li id="mybooks"><a href="{% url 'mybooks' %}">My Books</a></li>
+                    <li id="addbook"><a href="{% url 'addbook' %}">Add Book</a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}">My Books</a></li>
+                    <li><a href="{% url 'login' %}">Add Book</a></li>
+                {% endif %}
+            </ul>
+            <ul id="list2">
+                {% if user.is_authenticated %}
+                    <li id="userName">{{user.first_name}} {{user.last_name}}</li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{%url 'signup' %}">Signup</a></li>
+                {% endif %}
+
+            </ul>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

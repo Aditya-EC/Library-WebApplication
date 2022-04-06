@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    padding: 0;
+    counter-reset: Serial; 
+}
+#mainHeader h1{
+    text-align: center;
+}
+#navbar{
+    background: #ccc;
+    padding: 20px 0px;
+    position: sticky;
+    top: 0;
+}
+#navbar ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline;
+}
+
+#navbar li{
+    display: inline;
+    padding: 20px 10px;
+}
+#navbar li:first-child{
+    padding-left: 0;
+}
+#navbar a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+#navbar li:hover{
+    background: #aaa;
+}
+#list2{
+    position: relative;
+    float: right;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+table{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+thead td{
+    border: 2px solid black;
+    font-size: 18px;
+}
+tbody td{
+    padding:20px 0px;
+}
+tr{
+    border-bottom: 1px solid black;
+}
+
+.editButton,.deleteButton{
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0;
+    border-radius: 15px;
+    color: white;
+    
+}
+
+#actionHead{
+    border: None;
+}
+
+
+.actionData{
+    padding: 0;
+    width: 100px;
+}
+.editButton{
+    border:1px solid dodgerblue;
+    background-color: dodgerblue;
+    
+}
+.deleteButton{
+    border:1px solid red;
+    background-color: red;
+
+}
+#userName{
+    color: green;
+    font-size:20px;
+}
+
+tbody tr td:first-child:before
+{
+counter-increment: Serial; 
+content: counter(Serial); 
+}

@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("/media/images/img5.jpg");
+}
+#formcontainer{
+    width: 400px;
+    margin: 80px auto 0px auto;
+    text-align: center;
+    color: white;
+}
+form{
+
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 15px;
+    background: rgba(0,0,0,0.6);
+    
+    
+}
+input{
+    padding: 10px;
+    display: block;
+    margin: 15px auto 15px auto;
+    border-radius: 10px;
+     
+}
+input::placeholder{
+    color: rgb(206, 203, 24);
+}
+#id_first_name,#id_last_name,#id_email,#id_password1,#id_password2{
+    width: 80%;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    background: rgba(0,0,0,0.6);
+    letter-spacing: 0.1em;
+    color: white;
+    
+}
+button{
+    display: block;
+    margin: 0px auto 10px auto;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-weight: 600;
+    font-size: 1.0em;
+    border: 1px solid black;
+    color: rgb(45, 24, 206);
+}
+button:hover{
+    color: green;
+    cursor: pointer;
+}
+span a{
+    color: rgb(206, 203, 24);
+}
+#loginlink{
+    font-size: 20px;
+}
+
+ul[class='errorlist']{
+    color:red;
+    display: inline;
+    list-style: none;
+}
+label{
+    display: none;
+}
+.helptext{
+    display: none;
+}
+#error{
+    color: red;
+}
